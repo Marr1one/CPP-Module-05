@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: maissat <maissat@student.42.fr>            +#+  +:+       +#+         #
+#    By: root <root@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/09 18:49:05 by maissat           #+#    #+#              #
-#    Updated: 2025/10/09 18:49:26 by maissat          ###   ########.fr        #
+#    Updated: 2025/10/15 16:48:48 by root             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = animal
+NAME = ex01
 
 SRC = main.cpp Bureaucrat.cpp
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:52:48 by maissat           #+#    #+#             */
-/*   Updated: 2025/10/09 19:14:53 by maissat          ###   ########.fr       */
+/*   Updated: 2025/10/15 16:44:09 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,19 @@ int main()
 {
 	try
 	{
-		int grade = 151;
-		if (grade < 1 || grade > 150)
-		{
-			throw 
-		}
+		Bureaucrat b(150, "Marwan");
+		std::cout << b << std::endl;
+		b.Increment();
+		std::cout << b << std::endl;
+		b.Decrement();
+		std::cout << b << std::endl;
+		b.Decrement();
+		std::cout << b << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << "Exception catched !" << e.what() << std::endl;
 	}
+	return (0);
 	
 }
