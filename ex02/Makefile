@@ -5,14 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: root <root@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/09 18:49:05 by maissat           #+#    #+#              #
-#    Updated: 2025/10/17 16:54:53 by root             ###   ########.fr        #
+#    Created: 2025/10/17 16:54:24 by root              #+#    #+#              #
+#    Updated: 2025/10/18 15:46:19 by root             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex01
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+NAME = ex02
+
+SRC = main.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp AForm.cpp
 
 CFLAGS =  -Wall -Werror -Wextra -std=c++98
 

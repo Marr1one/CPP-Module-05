@@ -5,20 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 16:53:26 by maissat           #+#    #+#             */
-/*   Updated: 2025/10/16 17:54:58 by root             ###   ########.fr       */
+/*   Created: 2025/10/17 16:55:05 by root              #+#    #+#             */
+/*   Updated: 2025/10/18 15:56:09 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 
 Bureaucrat::Bureaucrat(int grade, std::string name) : name(name)
 {
 	if (grade > 150)
-		throw GradeTooHighException();
-	if (grade < 1)
 		throw GradeTooLowException();
+	if (grade < 1)
+		throw GradeTooHighException();
 	this->grade = grade;
 }
 
@@ -72,7 +75,7 @@ const char * Bureaucrat::GradeTooLowException::what() const throw()
 	return ("Grade too low, must be in 1-150 range !\n");
 }
 
-void Bureaucrat::signForm(Form &f)
+void Bureaucrat::signForm(AForm &f)
 {
 	try
 	{
