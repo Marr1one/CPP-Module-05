@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 17:01:19 by root              #+#    #+#             */
-/*   Updated: 2025/10/19 20:10:05 by maissat          ###   ########.fr       */
+/*   Created: 2025/10/19 15:36:01 by maissat           #+#    #+#             */
+/*   Updated: 2025/10/19 15:50:34 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AForm.hpp"
-#include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
+#ifndef RRForm_HPP
+#define RRForm_HPP
 
-int main ()
+#include "AForm.hpp"
+
+class RobotomyRequestForm : public AForm
 {
-	//AForm test;
-	try
-	{
-		Bureaucrat Peon(1, "Peon");
-		RobotomyRequestForm test;
-		test.beSigned(Peon);
-		test.execute(Peon);
-	}
-	catch( std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	
-}
+	private:
+		std::string target;
+	public:
+		RobotomyRequestForm();
+		RobotomyRequestForm( std::string &target);
+		~RobotomyRequestForm();
+		RobotomyRequestForm(RobotomyRequestForm &other);
+		RobotomyRequestForm &operator=(RobotomyRequestForm &other);
+		void  execute(Bureaucrat const & executor) const;
+};
+
+
+#endif
