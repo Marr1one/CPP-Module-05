@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 17:01:19 by root              #+#    #+#             */
-/*   Updated: 2025/10/20 14:34:42 by root             ###   ########.fr       */
+/*   Created: 2025/10/20 14:38:52 by root              #+#    #+#             */
+/*   Updated: 2025/10/20 16:46:18 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef INTERN_HPP
+#define INTERN_HPP
+
 #include "AForm.hpp"
-#include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-int main ()
+class Intern 
 {
-	//AForm test;
-	try
-	{
-		Bureaucrat Boss(1, "Boss");
-		ShrubberyCreationForm test("Home");
-		Boss.signForm(test);
-		Boss.executeForm(test);
-	}
-	catch( std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	
-}
+	public :
+		Intern();
+		~Intern();
+		Intern(Intern &other);
+		Intern &operator=(Intern &other);
+		AForm *makeform(std::string name, std::string target);
+};
+
+
+#endif
