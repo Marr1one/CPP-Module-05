@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:52:48 by maissat           #+#    #+#             */
-/*   Updated: 2025/10/15 16:44:09 by root             ###   ########.fr       */
+/*   Updated: 2025/11/02 15:18:09 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	try
 	{
-		Bureaucrat b(150, "Marwan");
+		Bureaucrat b;
 		std::cout << b << std::endl;
 		b.Increment();
 		std::cout << b << std::endl;
@@ -27,7 +27,7 @@ int main()
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "Exception catched !" << e.what() << std::endl;
+		std::cerr << "Exception catched : " << e.what() << std::endl;
 	}
 	return (0);
 	

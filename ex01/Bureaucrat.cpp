@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:53:26 by maissat           #+#    #+#             */
-/*   Updated: 2025/10/16 17:54:58 by root             ###   ########.fr       */
+/*   Updated: 2025/11/02 15:20:16 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ Bureaucrat::Bureaucrat(int grade, std::string name) : name(name)
 	if (grade < 1)
 		throw GradeTooLowException();
 	this->grade = grade;
+}
+
+Bureaucrat::Bureaucrat(void) : grade(150), name("Random")
+{
 }
 
 Bureaucrat::~Bureaucrat()
