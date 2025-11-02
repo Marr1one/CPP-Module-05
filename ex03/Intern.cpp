@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:43:13 by root              #+#    #+#             */
-/*   Updated: 2025/10/20 17:00:47 by root             ###   ########.fr       */
+/*   Updated: 2025/11/02 19:47:49 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ AForm *Intern::makeform(std::string name, std::string target)
 			return (new RobotomyRequestForm(target));
 			break;
 		case 1:
-			std::cout << "Intern create " << name << " form\n";
+			std::cout << "Intern create " << name << " form\n";                   ?//A REFAIRE AVEC DES POINTEURS  SUR FONCTION 
 			return (new ShrubberyCreationForm(target));
 			break;
 		case 2:

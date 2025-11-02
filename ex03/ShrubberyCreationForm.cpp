@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:47:27 by root              #+#    #+#             */
-/*   Updated: 2025/10/20 14:34:11 by root             ###   ########.fr       */
+/*   Updated: 2025/11/02 19:41:56 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 		std::cout << " on arrive ici\n";
 		throw GradeTooLowException();
 	}
-	std::cout << "TARGET === > " << target << std::endl;
 	std::ofstream file((target + "_shrubbery").c_str());
 	if (!file.is_open())
 		throw std::runtime_error("Could not open file !\n");
