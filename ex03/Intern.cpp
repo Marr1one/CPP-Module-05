@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:43:13 by root              #+#    #+#             */
-/*   Updated: 2025/11/02 19:47:49 by maissat          ###   ########.fr       */
+/*   Updated: 2025/11/04 20:54:10 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,42 +21,36 @@ Intern::Intern(Intern &other)
 
 Intern &Intern::operator=(Intern &other){return *this;} //non plus
 
+AForm *create_PPF(std::string target)
+{
+	return (new PresidentialPardonForm(target));
+}
+
+AForm *create_RRF(std::string target)
+{
+	return (new RobotomyRequestForm(target));
+}
+
+AForm *create_SCF(std::string target)
+{
+	return (new ShrubberyCreationForm(target));
+}
+
 AForm *Intern::makeform(std::string name, std::string target)
 {
 	std::string tab_names[3] = {"robotomy request","shrubbery creation","presidential pardon"};
+	AForm *(*func_tab[])(std::string) = {&create_RRF, &create_SCF, &create_PPF};
 	
 	int i = 0;
-	bool found = false;
 	while (i < 3 )
 	{
 		if (name == tab_names[i])
 		{
-			found = true;
-			break;
+			std::cout << "i = " << i << std::endl;
+			return (func_tab[i](target));
 		}
 		i++;
 	}
-	if (!found)
-	{
-		throw std::runtime_error("Form name not found\n");
-		return (NULL);
-	}
-		
-	switch (i)
-	{
-		case 0:
-			std::cout << "Intern create " << name << " form\n";
-			return (new RobotomyRequestForm(target));
-			break;
-		case 1:
-			std::cout << "Intern create " << name << " form\n";                   ?//A REFAIRE AVEC DES POINTEURS  SUR FONCTION 
-			return (new ShrubberyCreationForm(target));
-			break;
-		case 2:
-			std::cout << "Intern create " << name << " form\n";
-			return (new PresidentialPardonForm(target));
-			break;
-		default:
-			return (NULL);
-	}
+	throw std::runtime_error("Form name not found\n");
+	return (NULL);
 }

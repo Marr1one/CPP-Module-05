@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:47:27 by root              #+#    #+#             */
-/*   Updated: 2025/11/02 19:41:56 by maissat          ###   ########.fr       */
+/*   Updated: 2025/11/04 20:52:34 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm &o
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const 
 {
+	std::cout << "in shrubbery form\n";
 	if (this->getIsSigned() == false)
 		throw std::runtime_error("Form not signed");
 	if (executor.getGrade() > this->getExec_grade())
