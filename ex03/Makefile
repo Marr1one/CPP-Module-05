@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: root <root@student.42.fr>                  +#+  +:+       +#+         #
+#    By: marwan <marwan@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 16:54:24 by root              #+#    #+#              #
-#    Updated: 2025/11/04 20:49:48 by root             ###   ########.fr        #
+#    Updated: 2025/12/09 16:56:56 by marwan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ $(NAME) : $(OBJ)
 
 clean : 
 	rm -f $(OBJ)
+	rm -f *_shrubbery
 fclean : clean
 	rm -f $(NAME)
 re : fclean $(NAME)

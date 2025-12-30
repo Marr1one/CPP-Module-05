@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:37:35 by maissat           #+#    #+#             */
-/*   Updated: 2025/10/20 14:11:23 by root             ###   ########.fr       */
+/*   Updated: 2025/12/09 16:28:37 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <cstdlib>
 #include <ctime>
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("Default form", 72, 45), target("default")
+RobotomyRequestForm::RobotomyRequestForm() : AForm("Default Robotomy form", 72, 45), target("default")
 {
 }
 
@@ -22,7 +22,7 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &other) : AForm(oth
 {
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string &target) : AForm("RobotomyRequestForm", 72, 45), target(target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : AForm("RobotomyRequestForm", 72, 45), target(target)
 {	
 }
 
@@ -50,13 +50,9 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	int random = std::rand();
 	std::cout <<  "chiffre random : " << random << std::endl;
 	if (random  % 2 == 0)
-	{
 		std::cout << this->target << " has been robotomized\n";
-	}
 	else
-	{
 		std::cout << this->target << " has not been robotomized\n";
-	}
 }
 
 std::ostream &operator<<(std::ostream &out, RobotomyRequestForm &rrf)

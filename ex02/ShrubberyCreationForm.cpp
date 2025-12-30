@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:47:27 by root              #+#    #+#             */
-/*   Updated: 2025/11/02 19:37:20 by maissat          ###   ########.fr       */
+/*   Updated: 2025/12/09 16:29:28 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Default form", 145, 137), target("default")
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Default Shrubbery Form", 145, 137), target("default")
 {
 }
 
@@ -20,7 +20,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &other) : AFo
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("ShrubberyCreationForm", 145, 137), target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string target) : AForm("ShrubberyCreationForm", 145, 137), target(target)
 {	
 }
 

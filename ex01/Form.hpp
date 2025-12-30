@@ -3,25 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:32:51 by root              #+#    #+#             */
-/*   Updated: 2025/10/17 17:00:22 by root             ###   ########.fr       */
+/*   Updated: 2025/12/09 16:01:27 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 
-#include "Bureaucrat.hpp"
+#include <iostream>
+
+class Bureaucrat;
 
 class Form 
 {
 	private :
-		const std::string name;
-		bool is_signed = false;
-		const int sign_grade;
-		const int exec_grade;
+		const std::string _name;
+		bool _is_signed;
+		const int _sign_grade;
+		const int _exec_grade;
 	public:
 		Form();
 		Form(std::string name, int sign_grade, int exex_grade);

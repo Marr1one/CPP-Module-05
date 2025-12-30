@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:43:13 by root              #+#    #+#             */
-/*   Updated: 2025/11/04 20:54:10 by root             ###   ########.fr       */
+/*   Updated: 2025/12/09 17:08:35 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ AForm *create_SCF(std::string target)
 	return (new ShrubberyCreationForm(target));
 }
 
-AForm *Intern::makeform(std::string name, std::string target)
+AForm *Intern::	makeform(std::string name, std::string target)
 {
 	std::string tab_names[3] = {"robotomy request","shrubbery creation","presidential pardon"};
 	AForm *(*func_tab[])(std::string) = {&create_RRF, &create_SCF, &create_PPF};

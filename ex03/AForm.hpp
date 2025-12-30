@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:53 by root              #+#    #+#             */
-/*   Updated: 2025/10/18 15:49:38 by root             ###   ########.fr       */
+/*   Updated: 2025/12/09 16:55:16 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Bureaucrat;
 class AForm 
 {
 	private :
-		const std::string name;
-		bool is_signed = false;
-		const int sign_grade;
-		const int exec_grade;
+		const std::string _name;
+		bool _is_signed = false;
+		const int _sign_grade;
+		const int _exec_grade;
 	public:
 		AForm();
 		AForm(std::string name, int sign_grade, int exex_grade);

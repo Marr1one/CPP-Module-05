@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:05 by root              #+#    #+#             */
-/*   Updated: 2025/10/20 14:36:01 by root             ###   ########.fr       */
+/*   Updated: 2025/12/09 16:33:39 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void Bureaucrat::signForm(AForm &f)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << this->name << "couldn't sign" << f.getName() << "because " << e.what() << std::endl;
+		std::cout << this->name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
 	}
 }
 

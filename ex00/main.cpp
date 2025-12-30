@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:52:48 by maissat           #+#    #+#             */
-/*   Updated: 2025/11/02 15:18:09 by maissat          ###   ########.fr       */
+/*   Updated: 2025/12/09 15:33:01 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "Exception catched : " << e.what() << std::endl;
+		std::cerr << "Exception catched : " << e.what();
 	}
 	return (0);
 	
