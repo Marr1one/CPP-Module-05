@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:01:19 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 17:09:29 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/12 17:15:44 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int main ()
 		AForm *form_capsule;
 
 		form_capsule = someIntern.makeform("shrubbery creation", "garden");
+
 		Bureaucrat boss(1, "boss");
 		boss.signForm(*form_capsule);
 		boss.executeForm(*form_capsule);

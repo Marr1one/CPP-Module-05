@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:56:04 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 16:35:28 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/12 17:17:30 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ void AForm::beSigned(Bureaucrat &b)
 
 std::ostream &operator<<(std::ostream &out, AForm &f)
 {
-	out << f.getName() << ", required sign grade :" << f.getSign_grade() << ", execute grade :" << f.getExec_grade();
+	out << f.getName() << ", required sign grade :" << f.getSign_grade() << ", execute grade :" << f.getExec_grade() << 
+	" ,status(0 no signed ,1 signed): " << f.getIsSigned();
 	return out;
 }
-
 // AForm::AForm() : name ("Default"), sign_grade(150), exec_grade(150)
 // {
 // }

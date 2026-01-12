@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:05 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 16:33:39 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/12 17:25:05 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat &other)
 {
 	if (this != &other)
 	{
-		this->grade = grade;
+		this->grade = other.grade;
 	}
 	return (*this);
 }

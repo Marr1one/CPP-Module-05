@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:53:26 by maissat           #+#    #+#             */
-/*   Updated: 2025/11/02 15:12:10 by maissat          ###   ########.fr       */
+/*   Updated: 2026/01/12 17:11:09 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ Bureaucrat::Bureaucrat(Bureaucrat &other) : name(other.name), grade(other.grade)
 Bureaucrat &Bureaucrat::operator=(Bureaucrat &other)	
 {
 	if (this != &other)
-	{
-		this->grade = grade;
-	}
+		this->grade = other.grade;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:47:27 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 16:29:28 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/12 17:21:08 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,4 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	file << "    |\n";
 	
 	file.close();
-}
-
-std::ostream &operator<<(std::ostream &out, ShrubberyCreationForm &scf)
-{
-	out << scf.getName() << ", required sign grade :" << scf.getSign_grade() << ", execute grade :" << scf.getExec_grade();
-	return out;
 }

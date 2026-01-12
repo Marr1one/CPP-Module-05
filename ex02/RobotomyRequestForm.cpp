@@ -6,13 +6,13 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:37:35 by maissat           #+#    #+#             */
-/*   Updated: 2025/12/09 16:28:37 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/12 17:23:16 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
-#include <ctime>
+
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("Default Robotomy form", 72, 45), target("default")
 {
@@ -46,17 +46,9 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	if (executor.getGrade() > this->getExec_grade())
 		throw GradeTooLowException();
 	std::cout << "Drilling sounds : PRRRRRRRRRRRRRRRRRR\n";
-	std::srand(std::time(NULL));
 	int random = std::rand();
-	std::cout <<  "chiffre random : " << random << std::endl;
 	if (random  % 2 == 0)
 		std::cout << this->target << " has been robotomized\n";
 	else
 		std::cout << this->target << " has not been robotomized\n";
-}
-
-std::ostream &operator<<(std::ostream &out, RobotomyRequestForm &rrf)
-{
-	out << rrf.getName() << ", required sign grade :" << rrf.getSign_grade() << ", execute grade :" << rrf.getExec_grade();
-	return out;
 }

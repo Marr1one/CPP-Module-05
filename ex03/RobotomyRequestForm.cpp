@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:37:35 by maissat           #+#    #+#             */
-/*   Updated: 2025/10/20 14:11:23 by root             ###   ########.fr       */
+/*   Updated: 2026/01/12 17:24:10 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,4 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	{
 		std::cout << this->target << " has not been robotomized\n";
 	}
-}
-
-std::ostream &operator<<(std::ostream &out, RobotomyRequestForm &rrf)
-{
-	out << rrf.getName() << ", required sign grade :" << rrf.getSign_grade() << ", execute grade :" << rrf.getExec_grade();
-	return out;
 }

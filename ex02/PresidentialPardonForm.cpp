@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:13:30 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 16:29:12 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/12 17:20:50 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,4 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 	if (executor.getGrade() > this->getExec_grade())
 		throw GradeTooLowException();
 	std::cout << this->target << " has been pardoned by Zaphod Beeblebrox.\n";
-}
-
-std::ostream &operator<<(std::ostream &out, PresidentialPardonForm &ppf)
-{
-	out << ppf.getName() << ", required sign grade :" << ppf.getSign_grade() << ", execute grade :" << ppf.getExec_grade();
-	return out;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:36:01 by maissat           #+#    #+#             */
-/*   Updated: 2025/10/20 14:11:00 by root             ###   ########.fr       */
+/*   Updated: 2026/01/12 17:24:18 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ class RobotomyRequestForm : public AForm
 		void  execute(Bureaucrat const & executor) const;
 };
 
-std::ostream &operator<<(std::ostream &out, RobotomyRequestForm &Rrf);
 
 #endif

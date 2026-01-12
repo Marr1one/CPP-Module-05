@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:01:19 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 16:49:13 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/12 17:22:40 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include <ctime>
 
 int main()
 {
+    std::srand(std::time(NULL));
     std::cout << "=== Test 1: PresidentialPardonForm ===\n" << std::endl;
     Bureaucrat Ministre(20, "Ministre");
     PresidentialPardonForm ppf("Amende");
     std::cout << ppf << std::endl;
     Ministre.signForm(ppf);
+    std::cout << ppf << std::endl;
     Ministre.executeForm(ppf);
     
     std::cout << "\n=== Test 2: RobotomyRequestForm ===\n" << std::endl;
