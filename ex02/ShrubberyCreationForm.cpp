@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:47:27 by root              #+#    #+#             */
-/*   Updated: 2026/01/12 17:21:08 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:29:57 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Default Shrubbery Form",
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &other) : AForm(other), target(other.target)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : AForm(other), target(other.target)
 {
 }
 
@@ -28,7 +28,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm &other)
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other)
 {
 	if (this != &other)
 	{

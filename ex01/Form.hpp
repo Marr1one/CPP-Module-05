@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:32:51 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 16:01:27 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:14:14 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Form
 	public:
 		Form();
 		Form(std::string name, int sign_grade, int exex_grade);
-		Form(Form &other);
-		Form &operator=(Form &other);
+		Form(const Form &other);
+		Form &operator=(const Form &other);
 		~Form();	
 		const std::string getName() const ;
 		const int getSign_grade()  const;

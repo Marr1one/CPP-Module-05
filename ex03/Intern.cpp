@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:43:13 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 17:08:35 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:30:35 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ Intern::Intern(){}
 
 Intern::~Intern(){}
 
-Intern::Intern(Intern &other)
+Intern::Intern(const Intern &other)
 {}//na pas trop de sens car intern n'a rien de private.
 
-Intern &Intern::operator=(Intern &other){return *this;} //non plus
+Intern &Intern::operator=(const Intern &other){return *this;} //non plus
 
 AForm *create_PPF(std::string target)
 {

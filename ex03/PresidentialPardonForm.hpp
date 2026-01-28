@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:14:45 by root              #+#    #+#             */
-/*   Updated: 2026/01/12 17:24:06 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:32:37 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class PresidentialPardonForm : public AForm
 		PresidentialPardonForm();
 		PresidentialPardonForm(std::string target);
 		~PresidentialPardonForm();
-		PresidentialPardonForm(PresidentialPardonForm &other);
-		PresidentialPardonForm &operator=(PresidentialPardonForm &other);
+		PresidentialPardonForm(const PresidentialPardonForm &other);
+		PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
 		void  execute(Bureaucrat const & executor) const;
 };
 

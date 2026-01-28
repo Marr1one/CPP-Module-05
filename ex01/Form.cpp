@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:40:09 by root              #+#    #+#             */
-/*   Updated: 2026/01/12 17:13:35 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:19:09 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ Form::Form(std::string name, int sign_grade, int exec_grade) : _is_signed(false)
 
 Form::~Form(){}
 
-Form::Form(Form &other) : _name(other._name), _is_signed(other._is_signed), _sign_grade(other._sign_grade),
+Form::Form(const Form &other) : _name(other._name), _is_signed(other._is_signed), _sign_grade(other._sign_grade),
 _exec_grade(other._exec_grade)
 {
 }
 
-Form &Form::operator=(Form &other)
+Form &Form::operator=(const Form &other)
 {
 	if (this != &other)
 	{

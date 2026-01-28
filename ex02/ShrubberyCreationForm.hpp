@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:06:04 by root              #+#    #+#             */
-/*   Updated: 2026/01/12 17:21:04 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:23:37 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm();
 		ShrubberyCreationForm(const std::string target);
 		~ShrubberyCreationForm();
-		ShrubberyCreationForm(ShrubberyCreationForm &other);
-		ShrubberyCreationForm &operator=(ShrubberyCreationForm &other);
+		ShrubberyCreationForm(const ShrubberyCreationForm &other);
+		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
 		void  execute(Bureaucrat const & executor) const;
 };
 

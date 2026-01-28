@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:53:26 by maissat           #+#    #+#             */
-/*   Updated: 2026/01/12 17:13:52 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:13:56 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ Bureaucrat::~Bureaucrat()
 {
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat &other) : name(other.name), grade(other.grade)
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name), grade(other.grade)
 {
 }
 
-Bureaucrat &Bureaucrat::operator=(Bureaucrat &other)	
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)	
 {
 	if (this != &other)
 	{

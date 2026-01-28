@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:37:35 by maissat           #+#    #+#             */
-/*   Updated: 2026/01/12 17:23:16 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:22:36 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ RobotomyRequestForm::RobotomyRequestForm() : AForm("Default Robotomy form", 72, 
 {
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &other) : AForm(other), target(other.target)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : AForm(other), target(other.target)
 {
 }
 
@@ -30,7 +30,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm &other)
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &other)
 {
 	if (this != &other)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:13:30 by root              #+#    #+#             */
-/*   Updated: 2025/11/04 20:52:12 by root             ###   ########.fr       */
+/*   Updated: 2026/01/28 16:33:32 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ PresidentialPardonForm::PresidentialPardonForm() : AForm("Default form", 25, 5),
 {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &other) : AForm(other), target(other.target)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other) : AForm(other), target(other.target)
 {
 }
 
@@ -29,7 +29,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm &other)
+PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &other)
 {
 	if (this != &other)
 	{

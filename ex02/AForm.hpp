@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:53 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 16:06:19 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:20:14 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class AForm
 	public:
 		AForm();
 		AForm(std::string name, int sign_grade, int exex_grade);
-		AForm(AForm &other);
-		AForm &operator=(AForm &other);
+		AForm(const AForm &other);
+		AForm &operator=(const AForm &other);
 		~AForm();	
 		const std::string getName() const ;
 		const int getSign_grade()  const;
