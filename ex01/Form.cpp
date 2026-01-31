@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:40:09 by root              #+#    #+#             */
-/*   Updated: 2026/01/28 16:19:09 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/31 17:59:34 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ const int Form::getSign_grade() const {return this->_sign_grade;}
 
 const int Form::getExec_grade() const {return this->_exec_grade;}
 
-const bool Form::getIsSigned() const {return this->_is_signed;}
+bool Form::getIsSigned() const {return this->_is_signed;}
 
 const char * Form::GradeTooHighException::what() const throw()
 {
@@ -66,9 +66,7 @@ const char * Form::GradeTooLowException::what() const throw()
 void Form::beSigned(Bureaucrat &b)
 {
 	if (this->_is_signed == true)
-	{
 		throw std::runtime_error("the form is already signed !\n");
-	}
 	if (b.getGrade() <= this->_sign_grade)
 		this->_is_signed = true;
 	else

@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:43:13 by root              #+#    #+#             */
-/*   Updated: 2026/01/28 16:30:35 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/31 18:23:45 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,10 @@ AForm *Intern::	makeform(std::string name, std::string target)
 	AForm *(*func_tab[])(std::string) = {&create_RRF, &create_SCF, &create_PPF};
 	
 	int i = 0;
-	while (i < 3 )
+	while (i < 3)
 	{
 		if (name == tab_names[i])
-		{
-			std::cout << "i = " << i << std::endl;
 			return (func_tab[i](target));
-		}
 		i++;
 	}
 	throw std::runtime_error("Form name not found\n");

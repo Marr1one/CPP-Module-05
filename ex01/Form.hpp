@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:32:51 by root              #+#    #+#             */
-/*   Updated: 2026/01/28 16:14:14 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/31 17:58:59 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Form
 		const std::string getName() const ;
 		const int getSign_grade()  const;
 		const int getExec_grade()  const;
-		const bool getIsSigned()  const;
+		bool getIsSigned()  const;
 		void beSigned(Bureaucrat &b);
 		class GradeTooHighException : public std::exception 
 		{
