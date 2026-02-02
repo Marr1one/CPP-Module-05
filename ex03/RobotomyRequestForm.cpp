@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:37:35 by maissat           #+#    #+#             */
-/*   Updated: 2026/01/28 16:33:53 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 14:59:51 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,9 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	std::cout << "Drilling sounds : PRRRRRRRRRRRRRRRRRR\n";
 	std::srand(std::time(NULL));
 	int random = std::rand();
-	std::cout <<  "chiffre random : " << random << std::endl;
+	//std::cout <<  "chiffre random : " << random << std::endl;
 	if (random  % 2 == 0)
-	{
 		std::cout << this->target << " has been robotomized\n";
-	}
 	else
-	{
 		std::cout << this->target << " has not been robotomized\n";
-	}
 }

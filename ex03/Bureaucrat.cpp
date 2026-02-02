@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:05 by root              #+#    #+#             */
-/*   Updated: 2026/01/28 16:31:53 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 14:34:04 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,6 @@ void Bureaucrat::executeForm(AForm const & form) const
 {
 	try
 	{
-		//possiblement il faut sign avant pour plus de comfort.
 		form.execute(*this);
 		std::cout << this->getName() << " executed " << form.getName() << std::endl;
 	}

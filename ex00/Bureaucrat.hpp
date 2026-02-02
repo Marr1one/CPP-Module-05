@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:48:56 by maissat           #+#    #+#             */
-/*   Updated: 2026/01/28 16:13:10 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 14:02:42 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class Bureaucrat
 		Bureaucrat(int grade, std::string name);
 		Bureaucrat(const Bureaucrat &other);
 		~Bureaucrat();
-		void Increment();
-		void Decrement();
+		void increment();
+		void decrement();
 		Bureaucrat &operator=(const Bureaucrat &other);
 		int getGrade() const;
 		std::string getName() const;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:43:13 by root              #+#    #+#             */
-/*   Updated: 2026/01/31 18:23:45 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 15:04:39 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ AForm *create_PPF(std::string target)
 	return (new PresidentialPardonForm(target));
 }
 
-AForm *create_RRF(std::string target)
+AForm *	create_RRF(std::string target)
 {
 	return (new RobotomyRequestForm(target));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 16:53:26 by maissat           #+#    #+#             */
-/*   Updated: 2026/01/31 18:02:17 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 14:07:42 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ std::string Bureaucrat::getName() const
 	return (this->name);
 }
 
-void Bureaucrat::Increment()
+void Bureaucrat::increment()
 {
 	if (this->grade - 1 < 1)
 		throw GradeTooHighException();
 	this->grade--;
 }
-void Bureaucrat::Decrement()
+void Bureaucrat::decrement()
 {
 	if (this->grade + 1 > 150)
 		throw GradeTooHighException();

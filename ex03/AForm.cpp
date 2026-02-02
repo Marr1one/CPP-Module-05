@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:56:04 by root              #+#    #+#             */
-/*   Updated: 2026/01/28 17:21:55 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 14:57:28 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ AForm &AForm::operator=(const AForm &other)
 	return (*this);
 }
 
-const std::string AForm::Name() const { return this->_name;}
+const std::string AForm::getName() const { return this->_name;}
 
-const int AForm::Sign_grade() const {return this->_sign_grade;}
+const int AForm::getSign_grade() const {return this->_sign_grade;}
 
-const int AForm::Exec_grade() const {return this->_exec_grade;}
+const int AForm::getExec_grade() const {return this->_exec_grade;}
 
-const bool AForm::IsSigned() const {return this->_is_signed;}
+const bool AForm::getIsSigned() const {return this->_is_signed;}
 
 const char * AForm::GradeTooHighException::what() const throw()
 {
@@ -70,7 +70,7 @@ void AForm::beSigned(Bureaucrat &b)
 	{
 		throw std::runtime_error("the AForm is already signed !\n");
 	}
-	if (b.Grade() <= this->_sign_grade)
+	if (b.getGrade() <= this->_sign_grade)
 		this->_is_signed = true;
 	else
 		throw GradeTooLowException();
@@ -78,8 +78,8 @@ void AForm::beSigned(Bureaucrat &b)
 
 std::ostream &operator<<(std::ostream &out, AForm &f)
 {
-	out << f.Name() << ", required sign grade :" << f.Sign_grade() << ", execute grade :" << f.Exec_grade() << 
-	" ,status(0 no signed ,1 signed): " << f.IsSigned();
+	out << f.getName() << ", required sign grade :" << f.getSign_grade() << ", execute grade :" << f.getExec_grade() << 
+	" ,status(0 no signed ,1 signed): " << f.getIsSigned();
 	return out;
 }
 

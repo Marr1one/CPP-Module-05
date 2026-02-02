@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:13:30 by root              #+#    #+#             */
-/*   Updated: 2026/01/28 16:33:32 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 15:01:48 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const 
 {
-	std::cout << "in presidential form\n";
 	if (!this->getIsSigned())
 		throw std::runtime_error("Form is not signed !\n");
 	if (executor.getGrade() > this->getExec_grade())

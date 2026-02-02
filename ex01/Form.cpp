@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:40:09 by root              #+#    #+#             */
-/*   Updated: 2026/01/31 17:59:34 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/02 14:12:47 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ const char * Form::GradeTooHighException::what() const throw()
 
 const char * Form::GradeTooLowException::what() const throw()
 {
-	return "Grade too low ! Form's grade is out of bounds\n";
+	return "Grade too low !\n";
 }
 
 void Form::beSigned(Bureaucrat &b)
